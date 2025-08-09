@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texas Hold'em Calculator / 德州扑克计算器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎰 Texas Hold'em Calculator</h1>
+            <h2>德州扑克概率计算器</h2>
+            <p>Calculate win probabilities and get betting recommendations / 计算胜率并获得下注建议</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Card Input Section -->
+            <div class="card-section">
+                <div class="input-group">
+                    <h3><i class="fas fa-playing-card"></i> Your Hole Cards / 你的底牌</h3>
+                    <div class="card-inputs">
+                        <input type="text" id="hole-card-1" placeholder="As" maxlength="3" class="card-input">
+                        <input type="text" id="hole-card-2" placeholder="Kh" maxlength="3" class="card-input">
+                    </div>
+                    <div class="card-help">
+                        Format: Rank + Suit (e.g., As, Kh, 10c, 2d) / 格式：等级+花色
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <h3><i class="fas fa-layer-group"></i> Community Cards / 公共牌 <span class="optional">(Optional / 可选)</span></h3>
+                    <div class="community-cards">
+                        <div class="flop">
+                            <label>Flop / 翻牌:</label>
+                            <input type="text" id="flop-1" placeholder="2c" maxlength="3" class="card-input">
+                            <input type="text" id="flop-2" placeholder="3h" maxlength="3" class="card-input">
+                            <input type="text" id="flop-3" placeholder="4s" maxlength="3" class="card-input">
+                        </div>
+                        <div class="turn-river">
+                            <label>Turn / 转牌:</label>
+                            <input type="text" id="turn" placeholder="5d" maxlength="3" class="card-input">
+                            <label>River / 河牌:</label>
+                            <input type="text" id="river" placeholder="6c" maxlength="3" class="card-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Settings -->
+            <div class="settings-section">
+                <div class="setting-group">
+                    <label for="num-opponents"><i class="fas fa-users"></i> Number of Opponents / 对手数量:</label>
+                    <select id="num-opponents">
+                        <option value="1" selected>1 Opponent</option>
+                        <option value="2">2 Opponents</option>
+                        <option value="3">3 Opponents</option>
+                        <option value="4">4 Opponents</option>
+                        <option value="5">5 Opponents</option>
+                        <option value="6">6 Opponents</option>
+                        <option value="7">7 Opponents</option>
+                        <option value="8">8 Opponents</option>
+                        <option value="9">9 Opponents</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label for="pot-size"><i class="fas fa-coins"></i> Pot Size / 底池大小:</label>
+                    <input type="number" id="pot-size" value="100" min="1" step="1">
+                </div>
+
+                <div class="setting-group">
+                    <label for="bet-to-call"><i class="fas fa-dollar-sign"></i> Bet to Call / 需要跟注:</label>
+                    <input type="number" id="bet-to-call" value="10" min="0" step="1">
+                </div>
+
+                <div class="setting-group">
+                    <label for="player-position"><i class="fas fa-chair"></i> Your Position / 您的位置:</label>
+                    <select id="player-position">
+                        <option value="SB">Small Blind / 小盲</option>
+                        <option value="BB" selected>Big Blind / 大盲</option>
+                        <option value="UTG">Under The Gun / 枪口位</option>
+                        <option value="MP">Middle Position / 中位</option>
+                        <option value="CO">Cutoff / 关煞位</option>
+                        <option value="BTN">Button / 按钮位</option>
+                    </select>
+                </div>
+
+                <div class="setting-group">
+                    <label for="simulations"><i class="fas fa-calculator"></i> Simulations / 模拟次数:</label>
+                    <select id="simulations">
+                        <option value="1000">1,000 (Fast / 快速)</option>
+                        <option value="5000" selected>5,000 (Accurate / 准确)</option>
+                        <option value="10000">10,000 (Precise / 精确)</option>
+                        <option value="20000">20,000 (Very Precise / 非常精确)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Player Actions Section -->
+            <div class="actions-section">
+                <h3><i class="fas fa-history"></i> Player Actions / 玩家动作</h3>
+                <div class="actions-container" id="actions-container">
+                    <!-- Player action records will be dynamically added here -->
+                </div>
+                <div class="action-input">
+                    <select id="action-player">
+                        <option value="">Select Player / 选择玩家</option>
+                    </select>
+                    <select id="action-type">
+                        <option value="fold">Fold / 弃牌</option>
+                        <option value="check">Check / 过牌</option>
+                        <option value="call">Call / 跟注</option>
+                        <option value="raise">Raise / 加注</option>
+                        <option value="all-in">All-in / 全下</option>
+                    </select>
+                    <input type="number" id="action-amount" placeholder="Amount / 金额" min="0" style="display: none;">
+                    <button id="add-action-btn" class="btn-secondary">
+                        <i class="fas fa-plus"></i> Add Action / 添加动作
+                    </button>
+                    <button id="clear-actions-btn" class="btn-secondary">
+                        <i class="fas fa-trash"></i> Clear All / 清除所有
+                    </button>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-section">
+                <button id="calculate-btn" class="btn-primary">
+                    <i class="fas fa-calculator"></i> Calculate / 计算
+                </button>
+                <button id="clear-btn" class="btn-secondary">
+                    <i class="fas fa-eraser"></i> Clear / 清除
+                </button>
+                <button id="presets-btn" class="btn-secondary">
+                    <i class="fas fa-list"></i> Presets / 预设
+                </button>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div id="loading" class="loading hidden">
+                <i class="fas fa-spinner fa-spin"></i> Calculating probabilities... / 正在计算概率...
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results-section hidden">
+                <!-- Probability Results -->
+                <div class="result-card">
+                    <h3><i class="fas fa-chart-pie"></i> Probability Analysis / 概率分析</h3>
+                    <div class="probability-bars">
+                        <div class="prob-bar">
+                            <label>Win / 胜率:</label>
+                            <div class="bar-container">
+                                <div id="win-bar" class="progress-bar win-bar"></div>
+                                <span id="win-percentage">0%</span>
+                            </div>
+                        </div>
+                        <div class="prob-bar">
+                            <label>Tie / 平局:</label>
+                            <div class="bar-container">
+                                <div id="tie-bar" class="progress-bar tie-bar"></div>
+                                <span id="tie-percentage">0%</span>
+                            </div>
+                        </div>
+                        <div class="prob-bar">
+                            <label>Lose / 败率:</label>
+                            <div class="bar-container">
+                                <div id="lose-bar" class="progress-bar lose-bar"></div>
+                                <span id="lose-percentage">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simulations-info">
+                        Based on <span id="simulations-count">0</span> simulations / 基于 <span id="simulations-count-cn">0</span> 次模拟
+                    </div>
+                </div>
+
+                <!-- Hand Strength -->
+                <div class="result-card">
+                    <h3><i class="fas fa-fist-raised"></i> Hand Strength / 手牌强度</h3>
+                    <div class="hand-info">
+                        <div class="current-hand">
+                            <strong>Current Hand / 当前手牌:</strong> 
+                            <span id="hand-description">-</span>
+                        </div>
+                        <div class="hand-rank">
+                            <strong>Hand Rank / 手牌等级:</strong>
+                            <span id="hand-rank">-</span>
+                        </div>
+                        <div class="strength-score" id="strength-score-div">
+                            <strong>Strength Score / 强度分数:</strong>
+                            <span id="strength-score">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Betting Recommendation -->
+                <div class="result-card betting-advice">
+                    <h3><i class="fas fa-lightbulb"></i> Betting Recommendation / 下注建议</h3>
+                    <div class="recommendation">
+                        <div class="action-recommendation">
+                            <strong>Recommended Action / 建议行动:</strong>
+                            <span id="recommended-action" class="action-badge">-</span>
+                        </div>
+                        <div class="confidence">
+                            <strong>Confidence / 置信度:</strong>
+                            <span id="confidence" class="confidence-badge">-</span>
+                        </div>
+                        <div class="expected-value">
+                            <strong>Expected Value / 期望值:</strong>
+                            <span id="expected-value">-</span>
+                        </div>
+                        <div class="pot-odds">
+                            <strong>Pot Odds / 底池赔率:</strong>
+                            <span id="pot-odds-display">-</span>
+                        </div>
+                        <div class="reasoning">
+                            <strong>Reasoning / 理由:</strong>
+                            <p id="reasoning-text">-</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Display -->
+            <div id="error" class="error-message hidden">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span id="error-text"></span>
+            </div>
+        </main>
+
+        <!-- Presets Modal -->
+        <div id="presets-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Preset Scenarios / 预设场景</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="presets-list" class="presets-list">
+                        <!-- Presets will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Help Modal -->
+        <div id="help-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Card Format Help / 牌面格式帮助</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="help-section">
+                        <h4>Ranks / 等级:</h4>
+                        <p>2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A</p>
+                    </div>
+                    <div class="help-section">
+                        <h4>Suits / 花色:</h4>
+                        <p>
+                            <strong>s</strong> = ♠ Spades / 黑桃<br>
+                            <strong>h</strong> = ♥ Hearts / 红桃<br>
+                            <strong>d</strong> = ♦ Diamonds / 方块<br>
+                            <strong>c</strong> = ♣ Clubs / 梅花
+                        </p>
+                    </div>
+                    <div class="help-section">
+                        <h4>Examples / 示例:</h4>
+                        <p>
+                            As = Ace of Spades / 黑桃A<br>
+                            Kh = King of Hearts / 红桃K<br>
+                            10c = Ten of Clubs / 梅花10<br>
+                            2d = Two of Diamonds / 方块2
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                <button id="help-btn" class="btn-link">
+                    <i class="fas fa-question-circle"></i> Card Format Help / 牌面格式帮助
+                </button>
+            </p>
+            <p>Made with ❤️ for poker enthusiasts worldwide / 为全世界的扑克爱好者用❤️制作</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
