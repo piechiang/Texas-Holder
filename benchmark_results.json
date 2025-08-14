@@ -1,0 +1,807 @@
+{
+  "total_scenarios": 53,
+  "passed": 44,
+  "failed": 9,
+  "success_rate": 0.8301886792452831,
+  "total_time": 43.44455122947693,
+  "average_time_per_scenario": 0.8197085137637157,
+  "total_simulations": 530000,
+  "simulations_per_second": 12199.458505176075,
+  "scenarios": [
+    {
+      "description": "AA vs 1 random opponent preflop",
+      "win_rate": 0.8481,
+      "expected_range": "80.0%-88.0%",
+      "in_range": true,
+      "calculation_time": 0.8304924964904785,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ah",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0053,
+        "lose_rate": 0.14660000000000004
+      }
+    },
+    {
+      "description": "KK vs 1 random opponent preflop",
+      "win_rate": 0.8194,
+      "expected_range": "78.0%-85.0%",
+      "in_range": true,
+      "calculation_time": 0.7836759090423584,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Kd Kh",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0048,
+        "lose_rate": 0.17579999999999998
+      }
+    },
+    {
+      "description": "QQ vs 1 random opponent preflop",
+      "win_rate": 0.7948,
+      "expected_range": "75.0%-82.0%",
+      "in_range": true,
+      "calculation_time": 0.73744797706604,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Qs Qc",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0043,
+        "lose_rate": 0.20090000000000005
+      }
+    },
+    {
+      "description": "JJ vs 1 random opponent preflop",
+      "win_rate": 0.7698,
+      "expected_range": "72.0%-79.0%",
+      "in_range": true,
+      "calculation_time": 0.6719765663146973,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Js Jd",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.005,
+        "lose_rate": 0.22519999999999996
+      }
+    },
+    {
+      "description": "TT vs 1 random opponent preflop",
+      "win_rate": 0.7496,
+      "expected_range": "68.0%-75.0%",
+      "in_range": true,
+      "calculation_time": 0.787733793258667,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ts Th",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0053,
+        "lose_rate": 0.24509999999999996
+      }
+    },
+    {
+      "description": "AK suited vs 1 random opponent preflop",
+      "win_rate": 0.6512,
+      "expected_range": "62.0%-68.0%",
+      "in_range": true,
+      "calculation_time": 0.6737937927246094,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0176,
+        "lose_rate": 0.3312
+      }
+    },
+    {
+      "description": "AK offsuit vs 1 random opponent preflop",
+      "win_rate": 0.6368,
+      "expected_range": "60.0%-66.0%",
+      "in_range": true,
+      "calculation_time": 0.8178699016571045,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad Kh",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0164,
+        "lose_rate": 0.34679999999999994
+      }
+    },
+    {
+      "description": "AQ suited vs 1 random opponent preflop",
+      "win_rate": 0.6467,
+      "expected_range": "60.0%-67.0%",
+      "in_range": true,
+      "calculation_time": 0.7480497360229492,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ac Qc",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0162,
+        "lose_rate": 0.33709999999999996
+      }
+    },
+    {
+      "description": "AJ suited vs 1 random opponent preflop",
+      "win_rate": 0.6351,
+      "expected_range": "58.0%-65.0%",
+      "in_range": true,
+      "calculation_time": 0.6645774841308594,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ah Jh",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0193,
+        "lose_rate": 0.3456
+      }
+    },
+    {
+      "description": "AT suited vs 1 random opponent preflop",
+      "win_rate": 0.627,
+      "expected_range": "56.0%-63.0%",
+      "in_range": true,
+      "calculation_time": 0.7522869110107422,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ts",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0195,
+        "lose_rate": 0.3535
+      }
+    },
+    {
+      "description": "AA vs 2 random opponents preflop",
+      "win_rate": 0.7301,
+      "expected_range": "68.0%-75.0%",
+      "in_range": true,
+      "calculation_time": 0.8017175197601318,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ah",
+        "community_cards": "",
+        "opponents": 2,
+        "tie_rate": 0.0055,
+        "lose_rate": 0.2644
+      }
+    },
+    {
+      "description": "AA vs 3 random opponents preflop",
+      "win_rate": 0.6299,
+      "expected_range": "58.0%-65.0%",
+      "in_range": true,
+      "calculation_time": 1.0330901145935059,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ah",
+        "community_cards": "",
+        "opponents": 3,
+        "tie_rate": 0.0058,
+        "lose_rate": 0.36429999999999996
+      }
+    },
+    {
+      "description": "KK vs 2 random opponents preflop",
+      "win_rate": 0.684,
+      "expected_range": "65.0%-72.0%",
+      "in_range": true,
+      "calculation_time": 0.8093316555023193,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Kd Kh",
+        "community_cards": "",
+        "opponents": 2,
+        "tie_rate": 0.0056,
+        "lose_rate": 0.31039999999999995
+      }
+    },
+    {
+      "description": "QQ vs 2 random opponents preflop",
+      "win_rate": 0.6459,
+      "expected_range": "60.0%-68.0%",
+      "in_range": true,
+      "calculation_time": 0.8159761428833008,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Qs Qc",
+        "community_cards": "",
+        "opponents": 2,
+        "tie_rate": 0.0058,
+        "lose_rate": 0.34829999999999994
+      }
+    },
+    {
+      "description": "AK suited vs 2 random opponents preflop",
+      "win_rate": 0.4865,
+      "expected_range": "44.0%-52.0%",
+      "in_range": true,
+      "calculation_time": 0.8442206382751465,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "",
+        "opponents": 2,
+        "tie_rate": 0.0195,
+        "lose_rate": 0.49400000000000005
+      }
+    },
+    {
+      "description": "72 offsuit vs 1 random opponent preflop",
+      "win_rate": 0.3171,
+      "expected_range": "30.0%-37.0%",
+      "in_range": true,
+      "calculation_time": 0.6986594200134277,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "7d 2h",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0601,
+        "lose_rate": 0.6228
+      }
+    },
+    {
+      "description": "32 suited vs 1 random opponent preflop",
+      "win_rate": 0.3303,
+      "expected_range": "33.0%-40.0%",
+      "in_range": true,
+      "calculation_time": 0.6599071025848389,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "3s 2s",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0538,
+        "lose_rate": 0.6159
+      }
+    },
+    {
+      "description": "T9 suited vs 1 random opponent preflop",
+      "win_rate": 0.5199,
+      "expected_range": "54.0%-62.0%",
+      "in_range": false,
+      "calculation_time": 0.6853625774383545,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Tc 9c",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0337,
+        "lose_rate": 0.44639999999999996
+      }
+    },
+    {
+      "description": "65 suited vs 1 random opponent preflop",
+      "win_rate": 0.4056,
+      "expected_range": "40.0%-47.0%",
+      "in_range": true,
+      "calculation_time": 0.751455545425415,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "6h 5h",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0546,
+        "lose_rate": 0.5398000000000001
+      }
+    },
+    {
+      "description": "Set of aces on A72 rainbow",
+      "win_rate": 0.9749,
+      "expected_range": "93.0%-99.0%",
+      "in_range": true,
+      "calculation_time": 1.0073719024658203,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ah",
+        "community_cards": "Ad 7c 2h",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.02510000000000001
+      }
+    },
+    {
+      "description": "Set of kings on K72 rainbow",
+      "win_rate": 0.9826,
+      "expected_range": "93.0%-99.0%",
+      "in_range": true,
+      "calculation_time": 0.8798344135284424,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Kd Kh",
+        "community_cards": "Ks 7c 2h",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.01739999999999997
+      }
+    },
+    {
+      "description": "Overpair on low flop",
+      "win_rate": 0.8843,
+      "expected_range": "83.0%-90.0%",
+      "in_range": true,
+      "calculation_time": 0.8019421100616455,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ah",
+        "community_cards": "Kd 7c 2h",
+        "opponents": 1,
+        "tie_rate": 0.0012,
+        "lose_rate": 0.11450000000000002
+      }
+    },
+    {
+      "description": "Underpair on ace-high flop",
+      "win_rate": 0.8046,
+      "expected_range": "77.0%-85.0%",
+      "in_range": true,
+      "calculation_time": 0.8882451057434082,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Kd Kh",
+        "community_cards": "Ad 7c 2h",
+        "opponents": 1,
+        "tie_rate": 0.0006,
+        "lose_rate": 0.19480000000000003
+      }
+    },
+    {
+      "description": "Underpair on ace-king flop",
+      "win_rate": 0.7282,
+      "expected_range": "68.0%-76.0%",
+      "in_range": true,
+      "calculation_time": 0.8254961967468262,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Qs Qc",
+        "community_cards": "Ad Kc 2h",
+        "opponents": 1,
+        "tie_rate": 0.0038,
+        "lose_rate": 0.268
+      }
+    },
+    {
+      "description": "Nut flush draw + overcards",
+      "win_rate": 0.7161,
+      "expected_range": "67.0%-75.0%",
+      "in_range": true,
+      "calculation_time": 0.8730401992797852,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "Qd 7s 3s",
+        "opponents": 1,
+        "tie_rate": 0.0061,
+        "lose_rate": 0.27780000000000005
+      }
+    },
+    {
+      "description": "Open-ended straight draw",
+      "win_rate": 0.5539,
+      "expected_range": "52.0%-60.0%",
+      "in_range": true,
+      "calculation_time": 0.8314247131347656,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Jc Ts",
+        "community_cards": "9h 8d 2c",
+        "opponents": 1,
+        "tie_rate": 0.0134,
+        "lose_rate": 0.43270000000000003
+      }
+    },
+    {
+      "description": "Gutshot straight draw",
+      "win_rate": 0.4702,
+      "expected_range": "38.0%-46.0%",
+      "in_range": false,
+      "calculation_time": 0.827517032623291,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Jc Ts",
+        "community_cards": "9h 7d 2c",
+        "opponents": 1,
+        "tie_rate": 0.0112,
+        "lose_rate": 0.5186000000000001
+      }
+    },
+    {
+      "description": "Flush draw + gutshot",
+      "win_rate": 0.5663,
+      "expected_range": "52.0%-60.0%",
+      "in_range": true,
+      "calculation_time": 0.8343918323516846,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As 7s",
+        "community_cards": "9s 8d 6c",
+        "opponents": 1,
+        "tie_rate": 0.0701,
+        "lose_rate": 0.3636
+      }
+    },
+    {
+      "description": "Overcards on paired board",
+      "win_rate": 0.6185,
+      "expected_range": "58.0%-66.0%",
+      "in_range": true,
+      "calculation_time": 0.8600733280181885,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Kh",
+        "community_cards": "Qd Qc 7h",
+        "opponents": 1,
+        "tie_rate": 0.03,
+        "lose_rate": 0.3514999999999999
+      }
+    },
+    {
+      "description": "Set on turn vs random",
+      "win_rate": 0.9624,
+      "expected_range": "91.0%-97.0%",
+      "in_range": true,
+      "calculation_time": 0.8938899040222168,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "7s 7h",
+        "community_cards": "Ad 7c 2h 9d",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.03759999999999997
+      }
+    },
+    {
+      "description": "Two pair on turn vs random",
+      "win_rate": 0.9545,
+      "expected_range": "90.0%-96.0%",
+      "in_range": true,
+      "calculation_time": 0.9091439247131348,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad Kh",
+        "community_cards": "Ac Kc 7s 2h",
+        "opponents": 1,
+        "tie_rate": 0.0038,
+        "lose_rate": 0.04169999999999999
+      }
+    },
+    {
+      "description": "Top pair good kicker turn",
+      "win_rate": 0.8748,
+      "expected_range": "82.0%-89.0%",
+      "in_range": true,
+      "calculation_time": 1.149526834487915,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad Qh",
+        "community_cards": "Ac 7c 2h 9d",
+        "opponents": 1,
+        "tie_rate": 0.0064,
+        "lose_rate": 0.11879999999999998
+      }
+    },
+    {
+      "description": "Flush draw on turn",
+      "win_rate": 0.6408,
+      "expected_range": "58.0%-66.0%",
+      "in_range": true,
+      "calculation_time": 0.8347396850585938,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "Qd 7s 3s Jh",
+        "opponents": 1,
+        "tie_rate": 0.0055,
+        "lose_rate": 0.35369999999999996
+      }
+    },
+    {
+      "description": "Straight draw on turn",
+      "win_rate": 0.3996,
+      "expected_range": "42.0%-50.0%",
+      "in_range": false,
+      "calculation_time": 0.8479969501495361,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Jc Ts",
+        "community_cards": "9h 8d 2c 4s",
+        "opponents": 1,
+        "tie_rate": 0.0082,
+        "lose_rate": 0.5922000000000001
+      }
+    },
+    {
+      "description": "Full house on river",
+      "win_rate": 0.9823,
+      "expected_range": "95.0%-100.0%",
+      "in_range": true,
+      "calculation_time": 0.8799326419830322,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "7s 7h",
+        "community_cards": "Ad 7c 2h 9d As",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.01770000000000005
+      }
+    },
+    {
+      "description": "Flush on river",
+      "win_rate": 0.9988,
+      "expected_range": "98.0%-100.0%",
+      "in_range": true,
+      "calculation_time": 0.872596025466919,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "Qd 7s 3s Jh 5s",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.0011999999999999789
+      }
+    },
+    {
+      "description": "Straight on river",
+      "win_rate": 0.99,
+      "expected_range": "92.0%-98.0%",
+      "in_range": false,
+      "calculation_time": 0.869983434677124,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Jc Ts",
+        "community_cards": "9h 8d 2c 4s 7c",
+        "opponents": 1,
+        "tie_rate": 0.01,
+        "lose_rate": 8.673617379884035e-18
+      }
+    },
+    {
+      "description": "Two pair on river",
+      "win_rate": 0.9849,
+      "expected_range": "95.0%-99.0%",
+      "in_range": true,
+      "calculation_time": 0.9886155128479004,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad Kh",
+        "community_cards": "Ac 7c 2h 9d Ks",
+        "opponents": 1,
+        "tie_rate": 0.0032,
+        "lose_rate": 0.011900000000000003
+      }
+    },
+    {
+      "description": "One pair weak on river",
+      "win_rate": 0.9156,
+      "expected_range": "38.0%-46.0%",
+      "in_range": false,
+      "calculation_time": 0.8815710544586182,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Td 9h",
+        "community_cards": "Tc 7c 2h 9d As",
+        "opponents": 1,
+        "tie_rate": 0.0046,
+        "lose_rate": 0.07980000000000004
+      }
+    },
+    {
+      "description": "Straight on 965 flop",
+      "win_rate": 0.9242,
+      "expected_range": "88.0%-95.0%",
+      "in_range": true,
+      "calculation_time": 0.8060874938964844,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "8s 7s",
+        "community_cards": "9h 6d 5c",
+        "opponents": 1,
+        "tie_rate": 0.0409,
+        "lose_rate": 0.03489999999999998
+      }
+    },
+    {
+      "description": "Straight on T76 flop",
+      "win_rate": 0.9249,
+      "expected_range": "90.0%-97.0%",
+      "in_range": true,
+      "calculation_time": 0.7551374435424805,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "9c 8c",
+        "community_cards": "Th 7d 6s",
+        "opponents": 1,
+        "tie_rate": 0.0407,
+        "lose_rate": 0.034399999999999945
+      }
+    },
+    {
+      "description": "Straight on 632 flop",
+      "win_rate": 0.9234,
+      "expected_range": "88.0%-95.0%",
+      "in_range": true,
+      "calculation_time": 0.8028805255889893,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "5s 4s",
+        "community_cards": "6h 3d 2c",
+        "opponents": 1,
+        "tie_rate": 0.0423,
+        "lose_rate": 0.034300000000000004
+      }
+    },
+    {
+      "description": "Low pair on low flop",
+      "win_rate": 0.4174,
+      "expected_range": "38.0%-46.0%",
+      "in_range": true,
+      "calculation_time": 0.750272274017334,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "2s 2h",
+        "community_cards": "7d 5c 3h",
+        "opponents": 1,
+        "tie_rate": 0.0137,
+        "lose_rate": 0.5689
+      }
+    },
+    {
+      "description": "Middle pair on middle flop",
+      "win_rate": 0.5742,
+      "expected_range": "52.0%-60.0%",
+      "in_range": true,
+      "calculation_time": 1.0191469192504883,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "5s 5h",
+        "community_cards": "Jd 8c 4h",
+        "opponents": 1,
+        "tie_rate": 0.0018,
+        "lose_rate": 0.42399999999999993
+      }
+    },
+    {
+      "description": "Underpair on coordinated flop",
+      "win_rate": 0.4939,
+      "expected_range": "45.0%-53.0%",
+      "in_range": true,
+      "calculation_time": 0.812230110168457,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "8s 8h",
+        "community_cards": "Kd Qc Jh",
+        "opponents": 1,
+        "tie_rate": 0.0406,
+        "lose_rate": 0.4655
+      }
+    },
+    {
+      "description": "Premium pair vs random preflop",
+      "win_rate": 0.8519,
+      "expected_range": "80.0%-88.0%",
+      "in_range": true,
+      "calculation_time": 0.6676168441772461,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad Ah",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0051,
+        "lose_rate": 0.14300000000000002
+      }
+    },
+    {
+      "description": "Strong Broadway vs random preflop",
+      "win_rate": 0.5996,
+      "expected_range": "58.0%-65.0%",
+      "in_range": true,
+      "calculation_time": 0.6935338973999023,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Kd Qh",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0191,
+        "lose_rate": 0.3813
+      }
+    },
+    {
+      "description": "Suited connector vs random preflop",
+      "win_rate": 0.5773,
+      "expected_range": "52.0%-59.0%",
+      "in_range": true,
+      "calculation_time": 0.6201510429382324,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Ad 5d",
+        "community_cards": "",
+        "opponents": 1,
+        "tie_rate": 0.0371,
+        "lose_rate": 0.38559999999999994
+      }
+    },
+    {
+      "description": "Monster draw",
+      "win_rate": 0.9441,
+      "expected_range": "85.0%-93.0%",
+      "in_range": false,
+      "calculation_time": 0.7623887062072754,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "Qd Js Ts",
+        "opponents": 1,
+        "tie_rate": 0.037,
+        "lose_rate": 0.01889999999999995
+      }
+    },
+    {
+      "description": "Set vs random on dry board",
+      "win_rate": 0.9397,
+      "expected_range": "90.0%-97.0%",
+      "in_range": true,
+      "calculation_time": 0.7923321723937988,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "7s 7h",
+        "community_cards": "7d 2c 5h",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.06030000000000002
+      }
+    },
+    {
+      "description": "Two pair vs random on paired board",
+      "win_rate": 0.992,
+      "expected_range": "85.0%-93.0%",
+      "in_range": false,
+      "calculation_time": 0.8126323223114014,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Qs Qh",
+        "community_cards": "Qc Jd Jh",
+        "opponents": 1,
+        "tie_rate": 0.0003,
+        "lose_rate": 0.007700000000000007
+      }
+    },
+    {
+      "description": "Nut flush vs random",
+      "win_rate": 0.9953,
+      "expected_range": "93.0%-99.0%",
+      "in_range": false,
+      "calculation_time": 0.9747524261474609,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "As Ks",
+        "community_cards": "Ah 7s 3s 2s",
+        "opponents": 1,
+        "tie_rate": 0.0,
+        "lose_rate": 0.0047000000000000375
+      }
+    },
+    {
+      "description": "Broadway straight vs random",
+      "win_rate": 0.9665,
+      "expected_range": "88.0%-95.0%",
+      "in_range": false,
+      "calculation_time": 0.850430965423584,
+      "simulations": 10000,
+      "details": {
+        "hole_cards": "Jc Ts",
+        "community_cards": "9h 8d 7s Kc",
+        "opponents": 1,
+        "tie_rate": 0.0253,
+        "lose_rate": 0.008199999999999975
+      }
+    }
+  ]
+}
