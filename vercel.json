@@ -1,11 +1,11 @@
 {
   "rewrites": [
     { "source": "/static/(.*)", "destination": "/static/$1" },
-    { "source": "/(.*)", "destination": "/api/index.py" }
+    { "source": "/(.*)", "destination": "/api/index" }
   ],
   "functions": {
-    "api/**/*.py": {
-      "runtime": "python3.11"
+    "api/*.py": {
+      "runtime": "python3.9"
     }
   }
 }
