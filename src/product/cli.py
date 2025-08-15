@@ -46,27 +46,39 @@ def parse_opponent_spec(spec: str) -> Union[List[Card], str]:
 
 def main():
     parser = argparse.ArgumentParser(
+        prog="texas-holder",
         description="Texas Hold'em Equity Calculator with Auto Enumeration/MC",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   # Auto-select enumeration vs Monte Carlo
-  python -m src.product.cli --hero "AsKs" --villains "QhQs" --auto
+  texas-holder --hero "AsKs" --villains "QhQs" --auto
   
   # Multiple opponents (will use Monte Carlo)
-  python -m src.product.cli --hero "AhKh" --villains "random,random" --auto
+  texas-holder --hero "AhKh" --villains "random,random" --auto
   
-  # Force specific method
-  python -m src.product.cli --hero "JcJd" --villains "random" --force-mc --ci 0.01
+  # Force specific method  
+  texas-holder --hero "JcJd" --villains "random" --force-mc --ci 0.01
   
   # Exact enumeration for heads-up
-  python -m src.product.cli --hero "AsAd" --villains "KhKs" --force-enum
+  texas-holder --hero "AsAd" --villains "KhKs" --force-enum
+  
+  # Web interface (local development)
+  texas-holder --web
+  
+  # Interactive mode
+  texas-holder --interactive
         """
     )
     
-    # Hand specification
-    parser.add_argument("--hero", required=True, help="Hero's hole cards (e.g., 'As Ks')")
-    parser.add_argument("--villains", required=True, help="Villain specs, comma-separated (e.g., 'Qh Qs,random')")
+    # Mode selection
+    mode_group = parser.add_mutually_exclusive_group()
+    mode_group.add_argument("--web", action="store_true", help="Start web interface")
+    mode_group.add_argument("--interactive", "-i", action="store_true", help="Start interactive mode")
+
+    # Hand specification (not required if using web/interactive)
+    parser.add_argument("--hero", help="Hero's hole cards (e.g., 'As Ks')")
+    parser.add_argument("--villains", help="Villain specs, comma-separated (e.g., 'Qh Qs,random')")
     parser.add_argument("--community", default="", help="Community cards (e.g., '2h 3s 4d')")
     
     # Method selection
@@ -86,6 +98,16 @@ Examples:
     parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
     
     args = parser.parse_args()
+    
+    # Handle different modes
+    if args.web:
+        return start_web_interface()
+    elif args.interactive:
+        return start_interactive_mode()
+    
+    # For calculation mode, hero and villains are required
+    if not args.hero or not args.villains:
+        parser.error("--hero and --villains are required for calculation mode")
     
     # Default to auto if no method specified
     if not args.force_enum and not args.force_mc:
@@ -197,5 +219,67 @@ Examples:
         sys.exit(1)
 
 
+def start_web_interface():
+    """Start the Flask web interface"""
+    try:
+        # Import web_app from project root
+        import os
+        import subprocess
+        
+        # Get project root directory
+        project_root = Path(__file__).parent.parent.parent
+        web_app_path = project_root / "web_app.py"
+        
+        if not web_app_path.exists():
+            print("Error: web_app.py not found", file=sys.stderr)
+            return 1
+        
+        print("🎰 Starting Texas Hold'em Web Calculator...")
+        print("🌐 Open your browser and go to: http://localhost:8000")
+        print("Press Ctrl+C to stop the server\n")
+        
+        # Run the web app
+        os.chdir(project_root)
+        subprocess.run([sys.executable, "web_app.py"])
+        return 0
+        
+    except KeyboardInterrupt:
+        print("\n👋 Server stopped")
+        return 0
+    except Exception as e:
+        print(f"Error starting web interface: {e}", file=sys.stderr)
+        return 1
+
+
+def start_interactive_mode():
+    """Start the interactive mode"""
+    try:
+        # Import the existing interactive calculator
+        project_root = Path(__file__).parent.parent.parent
+        calc_path = project_root / "texas_holdem_calculator.py"
+        
+        if not calc_path.exists():
+            print("Error: texas_holdem_calculator.py not found", file=sys.stderr)
+            return 1
+        
+        print("🎰 Starting Texas Hold'em Interactive Calculator...")
+        print("Note: This will run the classic interactive interface\n")
+        
+        # Run the interactive calculator
+        import os
+        import subprocess
+        
+        os.chdir(project_root)
+        subprocess.run([sys.executable, "texas_holdem_calculator.py"])
+        return 0
+        
+    except KeyboardInterrupt:
+        print("\n👋 Interactive mode stopped")
+        return 0
+    except Exception as e:
+        print(f"Error starting interactive mode: {e}", file=sys.stderr)
+        return 1
+
+
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

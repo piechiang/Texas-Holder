@@ -1,8 +1,26 @@
 # Texas Hold'em Probability Calculator / 德州扑克概率计算器
 
+[![Demo](https://img.shields.io/badge/Demo-texas--holder.vercel.app-blue)](https://texas-holder.vercel.app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 🎰 A comprehensive Texas Hold'em poker probability calculator and strategy advisor that helps you make optimal decisions at the poker table.
 
 🎰 一个全面的德州扑克概率计算器和策略顾问，帮助您在牌桌上做出最优决策。
+
+## 🚀 Live Demo / 在线演示
+
+Try it now: **https://texas-holder.vercel.app**
+
+立即试用：**https://texas-holder.vercel.app**
+
+## 📚 Documentation Index / 文档索引
+
+- [Enhanced Features](MONTE_CARLO_CI_FEATURES.md) - Monte Carlo confidence intervals
+- [Performance Optimizations](OPTIMIZATION_SUMMARY.md) - Speed improvements and benchmarks  
+- [Range Parser](RANGE_PARSER_FEATURES.md) - Hand range analysis
+- [EV Calculator](EV_CALCULATOR_FEATURES.md) - Expected value calculations
+- [Auto Enumeration](ENUMERATION_AUTO_FEATURES.md) - Exact vs simulation switching
+- [Web Deployment](WEB_DEPLOYMENT.md) - Deployment instructions
 
 ## Features / 功能特点
 
@@ -23,7 +41,7 @@
 ### Installation / 安装
 ```bash
 # Clone the repository / 克隆仓库
-git clone https://github.com/yourusername/Texas-Holder.git
+git clone https://github.com/piechiang/Texas-Holder.git
 cd Texas-Holder
 
 # For command-line version - no dependencies required
@@ -32,6 +50,15 @@ cd Texas-Holder
 # 网页版本 - 安装Flask
 pip install -r requirements.txt
 ```
+
+### Running Options / 运行方式
+
+| Method / 方式 | Command / 命令 | Features / 特性 | Best For / 适用场景 |
+|---|---|---|---|
+| **🌐 Web (Local)** | `python web_app.py` | Interactive UI, Real-time calc | Development, Local use |
+| **⚡ Web (Vercel)** | Deploy to Vercel | Serverless, Auto-scaling | Production, Sharing |
+| **💻 CLI Interactive** | `python texas_holdem_calculator.py` | Command-line interface | Quick calculations |
+| **📦 CLI Package** | `pip install -e . && texas-holder` | Installed command | System-wide access |
 
 ### Usage Options / 使用选项
 
@@ -268,7 +295,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ### Development Setup / 开发环境设置
 ```bash
 # Clone repository / 克隆仓库
-git clone https://github.com/yourusername/Texas-Holder.git
+git clone https://github.com/piechiang/Texas-Holder.git
 cd Texas-Holder
 
 # Run tests / 运行测试

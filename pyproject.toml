@@ -57,7 +57,9 @@ all = [
 ]
 
 [project.scripts]
-thcalc = "texas_holdem_calculator:main"
+texas-holder = "src.product.cli:main"
+thcalc = "texas_holdem_calculator:main"  # Legacy alias
+texas-calc = "src.product.cli:main"  # Short alias
 
 [project.urls]
 "Homepage" = "https://github.com/piechiang/Texas-Holder"
