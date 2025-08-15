@@ -1,0 +1,24 @@
+# Enhanced Texas Hold'em Calculator Requirements
+# 增强版德州扑克计算器依赖
+
+# Core dependencies (required)
+# 核心依赖（必需）
+
+# Performance optimization (recommended)
+# 性能优化（推荐）
+numpy>=1.21.0          # Vectorized operations, 10-50x speedup
+numba>=0.56.0          # JIT compilation, ultra-fast hand evaluation
+
+# Optional performance enhancements
+# 可选性能增强
+eval7>=0.1.4           # Fast C++ hand evaluator (if available)
+
+# Testing and development (optional)
+# 测试和开发（可选）
+pytest>=6.0.0         # Unit testing
+pytest-cov>=2.0.0     # Coverage testing
+hypothesis>=6.0.0      # Property-based testing
+
+# System monitoring (optional)
+# 系统监控（可选）
+psutil>=5.0.0         # System resource monitoring for benchmarks
